@@ -19,8 +19,6 @@ namespace Exercicio20_11
             float[] media = new float [10];
             float mediaGeral;
 
-            int aprovados =0;
-            int reprovados =0;
 
             float soma = 0;
 
@@ -61,7 +59,7 @@ namespace Exercicio20_11
                 soma += media[i]; 
             }
 
-            mediaGeral = soma/110;
+            mediaGeral = soma/10;
 
             Console.WriteLine($"A média geral da sala é {mediaGeral}");
 
