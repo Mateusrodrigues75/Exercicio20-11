@@ -16,6 +16,9 @@ namespace Exercicio20_11
             float[] notas3 = new float [10];
             float[] notas4 = new float [10];
 
+            int aprovados = 0;
+            int reprovados = 0;
+
             float[] media = new float [10];
             float mediaGeral;
 
@@ -42,10 +45,12 @@ namespace Exercicio20_11
 
                 Console.WriteLine($"A media do aluno(a) {nomes[cont]} é {media[cont]}.");
                 if (media[cont] >= 7){
+                    aprovados = aprovados + 1;
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"{nomes[cont]} está APROVADO(A)!");
                     Console.ResetColor();                    
                 }else{
+                    reprovados = reprovados + 1;
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"{nomes[cont]} está REPROVADO(A)!");
                     Console.ResetColor();
@@ -53,8 +58,10 @@ namespace Exercicio20_11
                 Console.WriteLine("--------------------------------------");
             }
 
+            Console.WriteLine($"o total de alunos Aprovados :{aprovados}");
+            Console.WriteLine($"o total de alunos Reprovados :{reprovados}");
             
-            
+
             for (var i = 0; i < media.Length; i++){
                 soma += media[i]; 
             }
